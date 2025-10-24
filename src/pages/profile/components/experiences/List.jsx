@@ -1,19 +1,19 @@
 import React from "react";
 import Experiences from "@/pages/profile/components/experiences/index.jsx";
 import {useExperiencesList} from "@/features/experiences/hooks.js";
-import {transformExperiences} from "@/features/experiences/transform.js";
 import FetchWrapper from "@/components/FetchWrapper.jsx";
+import {experiences} from "@/data/index.js";
 
 const ExperiencesList = () => {
     const {data, isLoading, isError , error}  = useExperiencesList();
 
-    const items = transformExperiences(data?.data);
+    // const experiences = transformExperiences(data?.data);
 
     return (
         <div className="space-y-4">
-            {items?.map((item) => (
+            {experiences?.map((item) => (
                 <FetchWrapper
-                    isLoading={isLoading}
+                    isLoading={false}
                     isError={isError}
                     loadingRender={() => {
                         return (
