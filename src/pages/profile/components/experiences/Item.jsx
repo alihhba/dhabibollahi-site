@@ -3,13 +3,18 @@ import {cn} from "@/lib/utils/index.jsx";
 import Tag from "@/components/tag/Tag.jsx";
 import Icon from "@/icon/Icon.jsx";
 import icons from "@/lib/utils/icons.js";
+import {useNavigate} from "react-router-dom";
+import CanAccess from "@/components/auth/CanAccess.jsx";
+import Button from "@/components/Button.jsx";
 
-const ExperienceCard = ({data}) => {
+const ExperienceItem = ({data}) => {
+    const navigate = useNavigate();
     const [isOpen, setOpen] = useState(false);
     const contentRef = useRef(null);
     const [height, setHeight] = useState(0);
 
-    const {tag , title , content} = data || {}
+
+    const {tag, title, content, path , id} = data || {}
 
 
     useEffect(() => {
@@ -37,14 +42,33 @@ const ExperienceCard = ({data}) => {
                 </div>
 
                 <div className="flex flex-col gap-y-2">
-                    <Tag onClick={(e) => {
-                        e.stopPropagation()
-                    }} className="cursor-pointer">
-                        <div className="flex items-center gap-2">
-                            <p className={'text-xs'}>{tag}</p>
-                            <Icon icon={icons.arrow_up_right} className="w-2 h-2"/>
-                        </div>
-                    </Tag>
+                    <div className={'flex items-center gap-4'}>
+                        <Tag onClick={(e) => {
+                            e.stopPropagation()
+                            if (path) {
+                                window.open(path, '_blank')
+                            }
+                        }} className={cn(path && 'cursor-pointer')}>
+                            <div className="flex items-center gap-2">
+                                <p className={'text-xs'}>{tag}</p>
+                                {path ?
+                                    <Icon icon={icons.arrow_up_right} className="w-2 h-2"/>
+                                    : null}
+                            </div>
+                        </Tag>
+
+                        <CanAccess
+                        roles={['admin']}
+                        >
+                            <Button
+                            onClick={()=>{
+                                navigate(`/experiences/edit/${id}`)
+                            }}
+                            >
+                                Edit
+                            </Button>
+                        </CanAccess>
+                    </div>
                     <p className="text-xs font-semibold text-dark-100">
                         {title}
                     </p>
@@ -60,12 +84,10 @@ const ExperienceCard = ({data}) => {
             >
                 <p className="text-gray-300 mt-1 text-[12px]/6">
                     {content}
-
-
                 </p>
             </div>
         </div>
     );
 };
 
-export default ExperienceCard;
+export default ExperienceItem;

@@ -10,7 +10,7 @@ const navigate = useNavigate();
     if (!children) {
         return (
             <div
-                className={cn('flex gap-x-7  z-20  sticky top-0  bg-white-500 sm:py-6 py-4 px-4  sm:px-6 self-center w-full  md:max-w-5xl 2xl:max-w-7xl', className)} {...props}>
+                className={cn('flex gap-x-7  z-20  sticky top-0  bg-white-500 sm:py-6 py-4 px-4  sm:px-6 self-center w-full   md:max-w-7xl', className)} {...props}>
                 <button
                     onClick={()=>{
                         navigate(-1)
@@ -20,7 +20,7 @@ const navigate = useNavigate();
                 </button>
 
                 <div
-                    className={'flex bg-white card-shadow-2 card-shadow-1 z-20  w-full sm:h-19.5 h-12  items-center justify-start border-2 border-black/10 rounded-[14px] sm:rounded-[25px] sm:px-6 px-3 '}>
+                    className={'flex bg-white  z-20  w-full sm:h-19.5 h-12  items-center justify-start border-2 border-black/10 rounded-[14px] sm:rounded-[25px] sm:px-6 px-3 '}>
                     <p className={'sm:text-4xl/10 text-4.5 -mt-0.5 font-normal align-baseline'}>{title}</p>
                 </div>
             </div>

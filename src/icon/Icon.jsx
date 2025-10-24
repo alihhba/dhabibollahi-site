@@ -11,7 +11,7 @@ const Icon = ({
     return (
         <div
             {...props}
-            className={cn("w-4 h-4 flex items-center justify-center relative", className)}
+            className={cn("w-4 h-4 flex items-center justify-center relative ", className)}
         >
             {hasDot ? (
                 <div className={'absolute z-10  -top-[1px] end-[1px] w-full h-full'}>

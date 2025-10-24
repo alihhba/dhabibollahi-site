@@ -11,9 +11,14 @@ const ProjectCard = ({data}) => {
             onClick={() => {
                 navigate(`${pathname}/${id}-${title}`)
             }}
-            className={'rounded-[25px] w-full p-5 bg-gray-500 cursor-pointer hover:-rotate-3 transition-all duration-500 ease-in-out '}>
-            <div>
-                <img src={cover} alt={title} className={'w-full h-full rounded-[20px]'}/>
+            className={'rounded-[25px] w-full overflow-hidden  p-5 bg-gray-500 cursor-pointer hover:-rotate-3 transition-all duration-500 ease-in-out '}>
+            <div className={'h-60 bg-slate-400 rounded-[20px]'}>
+                <img
+                    loading={'lazy'}
+                    src={cover}
+                    alt={title}
+                    className={'w-full h-full rounded-[20px] object-cover'}
+                />
             </div>
 
             <p className={'mt-5 text-black font-semibold text-2xl  '}>
@@ -23,8 +28,6 @@ const ProjectCard = ({data}) => {
             <p className={'mt-1 text-black/50 font-normal text-md  '}>
                 {category}
             </p>
-
-
         </div>
     );
 };

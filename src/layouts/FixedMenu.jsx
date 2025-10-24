@@ -1,16 +1,23 @@
-import {useState, useRef, useEffect} from "react";
-import {useNavigate, useLocation} from "react-router-dom";
+import {useEffect, useRef, useState} from "react";
+import {useLocation, useNavigate} from "react-router-dom";
 import icons from "@/lib/utils/icons.js";
-import Icon from "@/icon/Icon.jsx";
+import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/Tooltip.jsx";
 import {cn} from "@/lib/utils/index.jsx";
-import {Tooltip, TooltipTrigger  , TooltipContent} from "@/components/Tooltip.jsx";
+import Icon from "@/icon/Icon.jsx";
 
 const menuItems = [
     {id: 1, title: "About Me", icon: icons.profile, path: ""},
     {id: 2, title: "Projects", icon: icons.file, path: "projects"},
     // {id: 3, title: "Test A", icon: icons.pen, path: "testA"},
-    {id: 4, title: "Test B", icon: icons.doc, path: "testB"},
-    {id: 5, title: "Test C", icon: icons.letter, path: "testC"},
+    {id: 4, title: "Visual Thoughts", icon: icons.doc, path: "visual-thoughts"},
+    {
+        id: 5, title: "Email to", icon: icons.letter,
+        onclick: () => {
+            window.open("https://mail.google.com/mail/?view=cm&fs=1&to=dnihabibollahi@gmail.com", '_blank')
+        }
+
+
+    },
     {id: 6, title: "Test", icon: icons.hash, path: "test"},
 ];
 
@@ -43,12 +50,18 @@ const FixedMenu = () => {
                 const isActive = pathname.split("/")[1] === item.path
 
                 return (
-                    <Tooltip delayDuration={1} >
-                        <TooltipTrigger >
+                    <Tooltip delayDuration={1}>
+                        <TooltipTrigger>
                             <button
                                 key={item.id}
                                 ref={(el) => (refs.current[index] = el)}
-                                onClick={() => navigate(`/${item.path}`)}
+                                onClick={() => {
+                                    if (item.onclick) {
+                                        item.onclick();
+                                    } else {
+                                        navigate(`/${item.path}`)
+                                    }
+                                }}
                                 className="relative flex  items-center justify-center transition-all "
                             >
                                 <div
@@ -76,7 +89,8 @@ const FixedMenu = () => {
                         </TooltipContent>
                     </Tooltip>
 
-                );
+                )
+                    ;
             })}
 
             <span
