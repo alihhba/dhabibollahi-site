@@ -14,7 +14,7 @@ const ExperiencesList = () => {
             {experiences?.map((item) => (
                 <FetchWrapper
                     isLoading={false}
-                    isError={isError}
+                    isError={false}
                     loadingRender={() => {
                         return (
                             <Experiences.Loading/>

@@ -11,14 +11,12 @@ const menuItems = [
     // {id: 3, title: "Test A", icon: icons.pen, path: "testA"},
     {id: 4, title: "Visual Thoughts", icon: icons.doc, path: "visual-thoughts"},
     {
-        id: 5, title: "Email to", icon: icons.letter,
-        onclick: () => {
-            window.open("https://mail.google.com/mail/?view=cm&fs=1&to=dnihabibollahi@gmail.com", '_blank')
-        }
-
-
+        id: 5, title: "Contact Us", icon: icons.letter, path: 'contact-us'
+        // onclick: () => {
+        //     window.open("https://mail.google.com/mail/?view=cm&fs=1&to=dnihabibollahi@gmail.com", '_blank')
+        // }
     },
-    {id: 6, title: "Test", icon: icons.hash, path: "test"},
+    // {id: 6, title: "Test", icon: icons.hash, path: "test"},
 ];
 
 const FixedMenu = () => {
@@ -45,7 +43,7 @@ const FixedMenu = () => {
 
     return (
         <div
-            className="relative sm:w-fit bg-white rounded-[23px]  max-sm:w-full max-sm:justify-between z-50 p-3 flex items-center gap-x-4 card-shadow-1 blur_1 card-shadow-2">
+            className="relative w-fit mx-auto bg-white rounded-[23px]   max-sm:justify-between z-50 p-3 flex items-center gap-x-4 card-shadow-1 blur_1 card-shadow-2">
             {menuItems.map((item, index) => {
                 const isActive = pathname.split("/")[1] === item.path
 

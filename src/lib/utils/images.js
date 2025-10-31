@@ -9,10 +9,20 @@ import brand_identity from '@/assets/images/brand-identity.png'
 import motion_video from '@/assets/images/motion-video.png'
 import print_design from '@/assets/images/print-design.png'
 import infinite_x_mask from '@/assets/images/infinite-x-mask.png'
+import azki from '@/assets/images/azki.svg'
+import baman from '@/assets/images/baman.svg'
+import karizma from '@/assets/images/karizma.svg'
+import ofogh from '@/assets/images/ofogh.svg'
+import abidi from '@/assets/images/abidi.svg'
 
 
 
 const images = {
+    azki: azki,
+    baman: baman,
+    karizma: karizma,
+    ofogh: ofogh,
+    abidi: abidi,
     infinite_x_mask:  infinite_x_mask,
     danial : danial,
     p_1: p_1,

@@ -6,6 +6,8 @@ import Experiences from "@/pages/profile/components/experiences/index.jsx";
 import CanAccess from "@/components/auth/CanAccess.jsx";
 import Button from "@/components/Button.jsx";
 import {useNavigate} from "react-router-dom";
+import InfiniteImageLoop from "@/components/InfiniteImageLoop/index.jsx";
+import images from "@/lib/utils/images.js";
 
 
 const pageVariants = {
@@ -67,6 +69,35 @@ const ProfilePage = () => {
 
                         <div className={'mt-3 '}>
                             <Experiences.List/>
+                        </div>
+
+                        <div className={'pt-10'}>
+                            <div className={'py-5 px-6 bg-gray-100 rounded-[25px] cursor-pointer'}>
+                                <p className={'text-sm font-semibold'}>
+                                    Companies I've collaborated with
+                                </p>
+                                <div className={'py-5 pt-6'}>
+                                    <InfiniteImageLoop
+                                        logos={[
+                                            { src: images.azki },
+                                            { src: images.baman },
+                                            { src: images.karizma },
+                                            { src: images.ofogh },
+                                            { src: images.abidi },
+
+                                        ]}
+                                        speed={60}
+                                        direction="left"
+                                        logoHeight={26}
+                                        gap={40}
+                                        pauseOnHover
+                                        scaleOnHover
+                                        fadeOut
+                                        fadeOutColor="#F6F6F6"
+                                        ariaLabel="Technology partners"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
 

@@ -1,6 +1,7 @@
 import {useParams} from "react-router-dom";
 import {projects} from "@/data/index.js";
 import {useRef} from "react";
+import GoScrollButton from "@/components/GoScrollButton.jsx";
 
 
 const pageVariants = {
@@ -46,6 +47,25 @@ const ProjectDetailsPage = () => {
                         </div>
                     )
                 })}
+            </div>
+
+            <div
+                onClick={() => {
+                    if (mainRef.current) {
+                        mainRef.current.scrollTo({
+                            left: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                }}
+                className={'fixed right-5 top-1/2 max-md:hidden'}>
+                <GoScrollButton
+                    type={'left'}
+                />
+            </div>
+
+            <div className={'fixed bottom-20 max-md:end-4 end-12 md:hidden'}>
+                <GoScrollButton/>
             </div>
 
 

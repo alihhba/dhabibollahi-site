@@ -5,8 +5,8 @@ const MainLayout = ({children}) => {
         <div className={'sm:grid flex flex-col w-full grid-cols-12 gap-6  relative'}>
             {/*box*/}
             <div className={'h-fit col-span-4  flex flex-col sm:p-7.5 p-5 bg-primary-100  rounded-[25px] sm:sticky top-6'}>
-                <div className={'relative h-full w-full flex  grow sm:min-h-[280px] max-sm:max-h-[277px]  max-sm:overflow-y-hidden'}>
-                    <div className={'w-full min-w-full   absolute bottom-0  rounded-[25px] overflow-y-hidden min-h-full  bg-white  '}>
+                <div className={'relative h-full w-full flex bg-white rounded-[25px]  grow sm:min-h-[280px] max-sm:max-h-[277px]  max-sm:overflow-y-hidden'}>
+                    <div className={'w-full min-w-full   absolute bottom-0  rounded-[25px] overflow-y-hidden min-h-full    '}>
                     </div>
                     <img src={images.danial} className={'w-full h-full min-h-full z-20 sm:-mt-6 -mt-3 rounded-[25px] '} alt=""/>
                 </div>

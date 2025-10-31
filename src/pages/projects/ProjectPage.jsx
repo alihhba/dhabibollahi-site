@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import ProjectCard from "@/components/card/ProjectCard.jsx";
 import {motion} from "framer-motion";
 import {projects} from "@/data/index.js";
+import GoScrollButton from "@/components/GoScrollButton.jsx";
 
 const pageVariants = {
     initial: {opacity: 0, scale: 1},
@@ -31,6 +32,10 @@ const ProjectPage = () => {
                             <ProjectCard key={project.id} data={project}/>
                         )
                     }) : <div>empty</div>}
+
+                    <div className={'fixed bottom-20 max-md:end-4 end-12'}>
+                        <GoScrollButton/>
+                    </div>
                 </motion.div>
             </Page.Content>
         </Page>

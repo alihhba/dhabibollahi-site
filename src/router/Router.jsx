@@ -14,6 +14,7 @@ import ExperiencesLayout from "@/pages/experiences/ExperiencesLayout.jsx";
 import ProtectedRoute from "@/components/auth/ProtectedRoutes.jsx";
 import ProjectCategoryLayout from "@/pages/project-category/ProjectCategoryLayout.jsx";
 import ProjectCategoryPage from "@/pages/project-category/ProjectCategoryPage.jsx";
+import ContactUsPage from "@/pages/contact-us/ContactUsPage.jsx";
 
 const Router = () => {
     return (
@@ -22,6 +23,7 @@ const Router = () => {
                 <Route path={'/'} element={<MainNavigationLayout/>}>
                     <Route path={'/'} element={<ProfilePage/>}/>
                     <Route path={'/projects'} element={<ProjectsPage/>}/>
+                    <Route path={'/contact-us'} element={<ContactUsPage/>}/>
                     <Route path={'/visual-thoughts'} element={<VisualPage/>}/>
                     <Route path={'/projects/:id'} element={<ProjectPage/>}/>
                     <Route path={'/projects/:id/:projectId'} element={<ProjectDetailsPage/>}/>

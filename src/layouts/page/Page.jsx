@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import PageHeader from '@/pages/pageHeader/PageHeader.jsx';
 import PageContent from '@/layouts/page/PageContent.jsx';
-import { useLocation } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import {cn} from "@/lib/utils/index.jsx";
 
 
