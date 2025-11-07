@@ -3,6 +3,7 @@ import {projects} from "@/data/index.js";
 import {useRef} from "react";
 import GoScrollButton from "@/components/GoScrollButton.jsx";
 import Breadcrumb from "@/components/BreadCrumb.jsx";
+import MetaButtons from "@/components/metaButtons/index.jsx";
 
 
 const pageVariants = {
@@ -68,7 +69,7 @@ const ProjectDetailsPage = () => {
             </div>
 
             <div
-                className={'flex md:mt-16 flex-col  h-full  max-md:flex-col pb-28  max-md:mt-4  w-full gap-4 grow md:ps-20 md:pe-20'}>
+                className={'flex md:mt-16 flex-col  h-full  max-md:flex-col pb-10  max-md:mt-4  w-full gap-4 grow md:ps-20 md:pe-20'}>
                 {images?.map(image => {
                     return (
                         <div key={image}
@@ -96,6 +97,10 @@ const ProjectDetailsPage = () => {
 
             <div className={'fixed bottom-20 max-md:end-4 end-12 md:hidden'}>
                 <GoScrollButton/>
+            </div>
+
+            <div className={'pb-28'}>
+                <MetaButtons/>
             </div>
 
 

@@ -74,9 +74,74 @@ export const experiences = [
         title: 'Freelance graphic designer  •  Dec 2021 - Apr 2022',
         content: 'At Mirror Group, I was responsible for designing social media content for its subsidiaries like Mirrority, Mirrorix, and Mirrorim. Alongside graphic design, I also handled filming and video editing for various projects.\n' +
             'During this time, I focused on creating creative and engaging content tailored to each brand’s audience. This experience allowed me to grow my skills in both graphic design and video production while delivering impactful visuals for the brands.'
-    }
-]
+    },
+    {
+        id: 6,
+        tag: 'Cama Gears',
+        title: 'Freelance graphic designer  •  Dec 2021 - Apr 2022',
+        content: 'At cama gears, I was responsible for improving the brand’s visual identity and designing a wide range of materials, from packaging and printed collaterals to digital content.This experience strengthened the brand’s presence across both online and offline platforms, making its image more cohesive and professional.',
+        listContent: [
+            {
+                title: 'Key Responsibilities & Achievements:',
+                data: [
+                    {
+                        id: '1',
+                        content: "Enhanced the brand’s visual identity and established a consistent design system"
+                    },
+                    {
+                        id: '2',
+                        content: "Designed packaging and labeling for various coffee-related products"
+                    }, {
+                        id: '3',
+                        content: "Created print materials including event posters, product displays, and promotional assets"
+                    }, {
+                        id: '4',
+                        content: "Improved website visuals to align with the updated brand direction"
+                    }, {
+                        id: '5',
+                        content: "Developed engaging and minimal social media content consistent with the brand’s tone"
+                    }, {
+                        id: '6',
+                        content: "Designed targeted advertising banners and visuals for multiple product categories"
+                    }
+                ]
+            }
+        ],
+        path: 'https://camagears.ir'
+    },
+    {
+        id: 6,
+        tag: 'Everything Coffee',
+        title: 'Freelance graphic designer  •  Dec 2021 - Apr 2022',
+        content: 'At Everything Coffee Company, I was responsible for designing and implementing the brand’s visual identity across all touchpoints, from printed materials to digital advertising.My role focused on enhancing brand consistency, appeal, and recognition through creative direction and cohesive visual communication.',
+        listContent: [
+            {
+                title: 'Key Responsibilities & Achievements:',
+                data: [
+                    {
+                        id: '1',
+                        content: "Developed and implemented the brand’s complete visual identity across all materials and platforms"
+                    },
+                    {
+                        id: '2',
+                        content: "Designed stationery sets and various brand collateral"
+                    }, {
+                        id: '3',
+                        content: "Created marketing materials for both print and digital channels"
+                    }, {
+                        id: '4',
+                        content: "Designed and optimized advertising and promotional websites, including Google Ads visuals"
+                    }, {
+                        id: '5',
+                        content: "Provided consultancy to refine and strengthen brand identity for greater consistency and appeal"
+                    }
+                ]
+            }
+        ],
+        path: 'https://everythingcoffee.ae'
+    },
 
+]
 
 export const projects = [
     {
@@ -84,6 +149,7 @@ export const projects = [
         categoryId: 1,
         title: 'Nakh wear',
         date: "MAY 2023",
+        tags: ['Logo Design', 'Typography', 'Color Palette', 'Visual Identity', 'Branding'],
         client: 'client',
         cover: '/static/nakh/nakhwear1.png',
         category: 'Poster Design',

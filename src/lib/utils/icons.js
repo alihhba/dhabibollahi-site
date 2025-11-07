@@ -12,11 +12,14 @@ import whatsapp from '@/assets/icons/whatsapp.svg'
 import linkedin from '@/assets/icons/linkedin.svg'
 import instagram from '@/assets/icons/instagram.svg'
 import arrow_up from '@/assets/icons/arrow-up.svg'
-
-
-
+import info from '@/assets/icons/info.svg'
+import share from '@/assets/icons/share.svg'
+import close from '@/assets/icons/close.svg'
 
 const icons = {
+    close: close,
+    info: info,
+    share: share,
     telegram: telegram,
     linkedin: linkedin,
     instagram: instagram,
