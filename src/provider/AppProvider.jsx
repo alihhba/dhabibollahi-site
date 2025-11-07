@@ -9,7 +9,7 @@ export function AppProviders({children}) {
             <AuthProvider>
                 {children}
             </AuthProvider>
-            <ReactQueryDevtools initialIsOpen={false}/>
+            {/*<ReactQueryDevtools initialIsOpen={false}/>*/}
         </QueryClientProvider>
     )
 }
