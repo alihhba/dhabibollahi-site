@@ -46,7 +46,7 @@ const MetaButtons = () => {
 
             {/* Share Modal */}
             {isShareOpen && (
-                <div className="fixed backdrop-blur-sm inset-0 z-50 flex items-center justify-center">
+                <div className="fixed  backdrop-blur-sm inset-0 z-50 flex items-center justify-center">
                     <div
                         className={'relative bg-white rounded-2xl p-4 max-w-md w-full mx-4 shadow-xl border border-black/10'}>
                         <div className={'flex items-center justify-between mb-4'}>
@@ -69,8 +69,8 @@ const MetaButtons = () => {
                         {/* Link display and copy section */}
                         <div className="flex items-center gap-2">
                             <div
-                                className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 overflow-hidden">
-                                <p className="text-sm text-gray-700 truncate">
+                                className=" overflow-hidden bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 ">
+                                <p className="text-sm line-clamp-1 text-gray-700">
                                     {typeof window !== 'undefined' ? window.location.href : ''}
                                 </p>
                             </div>
@@ -103,11 +103,11 @@ const MetaButtons = () => {
                         <div className={'flex items-center justify-between'}>
                             <p className={'text-md font-semibold'}>Details</p>
                             <button
-                                onClick={() => closeModals()}
-                                className={'w-12 h-12 cursor-pointer flex items-center justify-center rounded-xl border border-black/10 hover:bg-gray-50 transition-colors'}
+                                onClick={closeModals}
+                                className={'w-8 h-8 cursor-pointer flex items-center justify-center rounded-lg border border-black/10 hover:bg-gray-50 transition-colors'}
                             >
                                 <Icon
-                                    className={'w-10 h-10'}
+                                    className={'w-5 h-5'}
                                     icon={icons.close}
                                 />
                             </button>
