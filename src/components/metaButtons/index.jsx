@@ -48,7 +48,7 @@ const MetaButtons = () => {
             {isShareOpen && (
                 <div className="fixed  backdrop-blur-sm inset-0 z-50 flex items-center justify-center">
                     <div
-                        className={'relative bg-white rounded-2xl p-4 max-w-md w-full mx-4 shadow-xl border border-black/10'}>
+                        className={'relative max-md:w-[95dvw] bg-white rounded-2xl p-4 max-w-md w-full mx-4 shadow-xl border border-black/10'}>
                         <div className={'flex items-center justify-between mb-4'}>
                             <p className={'text-md font-semibold'}>Share</p>
                             <button
@@ -99,7 +99,7 @@ const MetaButtons = () => {
             {isInfoOpen && (
                 <div className="fixed backdrop-blur-sm inset-0 z-50 flex items-center justify-center">
                     <div
-                        className={'relative bg-white rounded-2xl p-4 max-w-md w-full mx-4 shadow-xl border border-black/10'}>
+                        className={'relative max-md:w-[95dvw] bg-white rounded-2xl p-4 max-w-md w-full mx-4 shadow-xl border border-black/10'}>
                         <div className={'flex items-center justify-between'}>
                             <p className={'text-md font-semibold'}>Details</p>
                             <button
