@@ -83,6 +83,8 @@ export const projects = [
         id: 1,
         categoryId: 1,
         title: 'Nakh wear',
+        date: "MAY 2023",
+        client: 'client',
         cover: '/static/nakh/nakhwear1.png',
         category: 'Poster Design',
         description: 'Nakh is a clothing brand that stands for sophisticated exclusivity. Our mission is to offer discerning individuals a unique blend of cutting-edge design, impeccable craftsmanship, and limited-edition collections that reflect their individuality and style.',
