@@ -47,13 +47,8 @@ const MetaButtons = () => {
             {/* Share Modal */}
             {isShareOpen && (
                 <div className="fixed backdrop-blur-sm inset-0 z-50 flex items-center justify-center">
-                    {/* Backdrop */}
                     <div
-                        className="absolute inset-0 bg-black/10"
-                        onClick={closeModals}
-                    />
-
-                    <div className="relative bg-white rounded-2xl p-4 max-w-md w-full mx-4 shadow-xl border border-black/10">
+                        className={'relative bg-white rounded-2xl p-4 max-w-md w-full mx-4 shadow-xl border border-black/10'}>
                         <div className={'flex items-center justify-between mb-4'}>
                             <p className={'text-md font-semibold'}>Share</p>
                             <button
@@ -73,7 +68,8 @@ const MetaButtons = () => {
 
                         {/* Link display and copy section */}
                         <div className="flex items-center gap-2">
-                            <div className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 overflow-hidden">
+                            <div
+                                className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 overflow-hidden">
                                 <p className="text-sm text-gray-700 truncate">
                                     {typeof window !== 'undefined' ? window.location.href : ''}
                                 </p>
